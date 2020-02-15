@@ -1,0 +1,28 @@
+<div class="card my-5">
+    <div class="card-body">
+        <h2 class="card-title">
+           Todos
+        </h2>
+
+        <div class="card-text">
+           <div class="table-responsive">
+               <table class="table table-hover">
+                   <thead>
+                       <th>Título</th>
+                       <th>Descripción</th>
+                       <th>Estado</th>
+                   </thead>
+                   <tbody>
+                        <tr *ngFor="let todo of todos" (click)="onClick(todo);">
+                            <td>{{todo.title}}</td>
+                            <td>{{todo.description}}</td>
+                            <td> <input type="checkbox" [attr.checked]="todo.done ? 'checked' : null"  ></td>
+                        </tr>
+                   </tbody>
+               </table>
+           </div>
+        </div>
+    </div>
+</div>
+
+<app-todo-detail [item]="selectedItem" ></app-todo-detail>

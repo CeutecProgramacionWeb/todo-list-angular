@@ -1,0 +1,26 @@
+<div *ngIf="item" class="card my-5">
+    <div class="card-body">
+        <h2 class="card-title">
+            {{item.title | uppercase}}
+        </h2>
+
+        <div class="card-text">
+            <div class="form-group">
+                <label for="title">Título:</label>
+                <input id="title" type="text" [(ngModel)]="item.title" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción:</label>
+                <input id="description" type="text" [(ngModel)]="item.description" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="done">Done</label>
+                <br>
+                <input type="checkbox" [(ngModel)]="item.done"  >
+            </div>
+        </div>
+       
+            
+        
+    </div>
+</div>
