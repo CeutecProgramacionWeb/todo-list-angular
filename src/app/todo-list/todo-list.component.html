@@ -9,14 +9,12 @@
                <table class="table table-hover">
                    <thead>
                        <th>Título</th>
-                       <th>Descripción</th>
                        <th>Estado</th>
                    </thead>
                    <tbody>
                         <tr *ngFor="let todo of todos" (click)="onClick(todo);">
                             <td>{{todo.title}}</td>
-                            <td>{{todo.description}}</td>
-                            <td> <input type="checkbox" [attr.checked]="todo.done ? 'checked' : null"  ></td>
+                            <td> <input type="checkbox" [attr.checked]="todo.completed ? 'checked' : null"  ></td>
                         </tr>
                    </tbody>
                </table>
